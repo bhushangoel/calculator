@@ -1,0 +1,99 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.mt5 {
+    margin-top: 5%;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f30 {
+    font-size: 30px;
+}
+
+.main-div {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.keypad ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.keypad ul li {
+    text-align: center;
+    border: 1px solid #3484ab;
+    padding: 22px;
+    color: #edf7fd;
+    font-size: 25px;
+    background: #39a3e1;
+}
+
+.amt {
+    height: 65px;
+    background: #2e88c4;
+    color: #eff6fb;
+    font-size: 30px;
+    padding: 0;
+}
+
+.amt input {
+    height: 100%;
+    background: #2e88c4;
+    border: none;
+}
+
+.tax {
+    background: #eb2b50;
+    height: 80px;
+    color: #fef6f7;
+    font-size: 30px;
+    position: absolute;
+    width: 34%;
+    right: 0%;
+    z-index: 99;
+    top: -11%;
+    padding: 5px;
+}
+
+.tax input {
+    background: transparent;
+    border: none;
+    height: 37px;
+    margin: 0;
+    width: 100%;
+}
+
+.tax13 {
+    width: 42%;
+}
+
+.screen {
+    height: 125px;
+    color: #2e677f;
+}
+
+.shadow {
+    border-bottom: none;
+    padding: 10px;
+    box-shadow: 0px 0px 20px -6px #39a3e1;
+    border: 1px solid #39a3e1;
+}
+
+.input-field {
+    position: relative;
+}

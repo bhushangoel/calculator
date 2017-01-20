@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body ng-controller="mainCtrl">
+<div class="main-div">
+    <div class="screen row shadow">
+        <span class="col-md-7">
+            <p class="f16">Cost Price</p>
+            <p class="f30">{{calculatedAmount|number:2}}</p>
+        </span>
+        <span class="col-md-5">
+            <p class="f16">Tax Amount</p>
+            <p class="f30">{{calculatedTaxAmount|number:2}}</p>
+        </span>
+    </div>
+    <div class="input-field row">
+        <div class="amt " ng-class="{'col-md-7': focus, 'col-md-8': !focus}">
+            <span class="col-md-2 mt5" ng-show="formData.inputAmount" ng-click="clearInput()">X</span>
+            <input class="col-md-10" type="text" ng-model="formData.inputAmount" placeholder="Enter Amount"
+                   ng-maxlength="10" ng-change="calculateReversePerc()">
+        </div>
+        <div class="tax col-md-4" ng-class="{'col-md-5': focus, 'tax13': focus,  'col-md-4': !focus}">
+            <p class="f14">Tax in Percentage</p>
+            <input type="text" ng-model="formData.taxAmount" ng-focus="taxInputFocus()" ng-blur="taxInputFocus()" ng-change="calculateReversePerc()">
+        </div>
+    </div>
+    <div class="keypad row">
+        <ul>
+            <li ng-repeat="key in keypadArr" class="col-xs-4" ng-click="enterAmount(key)">
+                {{key}}
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="javascripts/angular.min.js"></script>
+<script src="javascripts/main.js"></script>
+</body>
+</html>
